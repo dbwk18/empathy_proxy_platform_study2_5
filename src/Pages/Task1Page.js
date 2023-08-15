@@ -178,7 +178,7 @@ export const Task1Page = (props) => {
                     : 
                         <>
                             <div className='explaination'>
-                                Please classify the following <b>initial tweet</b> (not tweet reply) as hate speech or non-hate speech to the <b>feminist movement</b>.
+                                Please classify the following <a style={{color: "#0481FF"}}><b>initial tweet</b></a> (not tweet reply) as hate speech or non-hate speech to the <b>feminist movement</b>.
                             </div>
                             <div className='explainBox'>
                                 <b>Annotation definitions:</b>
@@ -191,8 +191,11 @@ export const Task1Page = (props) => {
                                 {
                                     tweetData.map((data, index) => (
                                         <div className='questionBox' key={index}>
-                                            <div className='question'>
+                                            <div className='question tweet'>
                                             <b>{index + 1}. Tweet: "</b><i>{data.Tweet}</i><b>"</b>
+                                            </div>
+                                            <div className='question reply'>
+                                            <b>Reply: "</b><i>{data.action}</i><b>"</b>
                                             </div>
                                             <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} />
 
