@@ -137,6 +137,10 @@ export const Task1Page = (props) => {
             const newAnswer = [...prevAnswer];
             newAnswer[i] = [...newAnswer[i]];
             newAnswer[i][j] = val;
+
+            // clear sub question answer
+            if (j==0) newAnswer[i][1] = "";
+
             return newAnswer;
         });
     }
@@ -197,14 +201,14 @@ export const Task1Page = (props) => {
                                             <div className='question reply'>
                                             <b>Reply: "</b><i>{data.action}</i><b>"</b>
                                             </div>
-                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} />
+                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} id={id} tasknum={"task1"} qnum={index}/>
 
                                             {answer[index][0] === 'Non-hate' ? 
                                                 <div className='extraQuestionContainer'>
                                                     <div className='question'>
                                                         <b>{index + 1}-a.</b> Do you think the tweet belongs to the case of <b>"Advocate"</b>?
                                                     </div>
-                                                    <Multichoice val={answer[index][1]} setAnswer={(val) => setIthAnswer(index, 1, val)} labels={['Yes', 'No']} />
+                                                    <Multichoice val={answer[index][1]} setAnswer={(val) => setIthAnswer(index, 1, val)} labels={['Yes', 'No']} id={id} tasknum={"task1"} qnum={`${index}-sub`}/>
                                                 </div>
                                                 :
                                                 null
