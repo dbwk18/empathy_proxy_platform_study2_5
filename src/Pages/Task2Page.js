@@ -165,7 +165,7 @@ export const Task2Page = (props) => {
                         <>
                             <div className='explaination'>
                                 In <b>task 2</b>, you will be also detecting hate speech in the given tweets and provide annotations accordingly same as task1.
-                                However, unlike task 1, you will be provided with only the tweet without any additional information.  
+                                However, unlike task 1, you will be provided with only the tweet <b>without</b> any additional information.  
                                 Please carefully read the instructions below to complete the annotations.
                             </div>
                             <div className='explainBox'>
