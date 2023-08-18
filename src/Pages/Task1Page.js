@@ -201,7 +201,7 @@ export const Task1Page = (props) => {
                                             <div className='question reply'>
                                             <b>Reply: "</b><i>{data.action}</i><b>"</b>
                                             </div>
-                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} id={id} tasknum={"task1"} qnum={index}/>
+                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} id={id} tasknum={"task1"} qnum={`${index}-main`}/>
 
                                             {answer[index][0] === 'Non-hate' ? 
                                                 <div className='extraQuestionContainer'>

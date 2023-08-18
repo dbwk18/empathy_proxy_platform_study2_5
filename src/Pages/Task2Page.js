@@ -198,7 +198,7 @@ export const Task2Page = (props) => {
                                             <div className='question'>
                                             <b>{index + 1}. Tweet: "</b><i>{data.Tweet}</i><b>"</b>
                                             </div>
-                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} id={id} tasknum={"task2"} qnum={index}/>
+                                            <Multichoice key={index} val={answer[index][0]} setAnswer={(val) => setIthAnswer(index, 0, val)} labels={['Hate', 'Non-hate']} id={id} tasknum={"task2"} qnum={`${index}-main`}/>
 
                                             {answer[index][0] === 'Non-hate' ? 
                                                 <div className='extraQuestionContainer'>
