@@ -43,19 +43,6 @@ export const PostSurveyPage = (props) => {
     // set the page number
     const [currentPageNum, setCurrentPageNum] = useState(11);
 
-    const questions_qcae = [
-        'I can easily tell if someone else wants to enter a conversation.',
-        'I can pick up quickly if someone says one thing but means another.',
-        'I am good at predicting how someone will feel.',
-        'I am quick to spot when someone in a group is feeling awkward or uncomfortable.',
-        'Other people tell me I am good at understanding how they are feeling and what they are thinking.',
-        'I can easily tell if someone else is interested or bored with what I am saying',
-        'I can sense if I am intruding, even if the other person does not tell me.',
-        'I can easily work out what another person might want to talk about.',
-        'I can tell if someone is masking their true emotion.',
-        'I am good at predicting what someone will do.'
-    ];
-
     const questions = [
         'How mentally demanding was the task?',
         'How physically demanding was the task?',
@@ -65,7 +52,7 @@ export const PostSurveyPage = (props) => {
         'How insecure, discouraged, irritated, stressed, and annoyed were you?'
     ];
 
-    const [answer, setAnswer] = useState(Array(6).fill(''));
+    const [answer, setAnswer] = useState(Array(7).fill(''));
 
     function checkAllAnswered (answer) {
         const isAllAnswer = answer.every(item => item !== '');
@@ -147,6 +134,12 @@ export const PostSurveyPage = (props) => {
                     </div>
                     {currentPageNum === 11 ?
                         <div className='questionsContainer'>
+                            <div className='questionBox'>
+                                <div className='question'>
+                                    <b>1.</b>  (Optional) Feel free to leave any feedbacks regarding our survey.
+                                </div>
+                                <input className='shortform' name={0} value={answer[0]} onChange={inputHandler}/>
+                            </div>
                             {/* <div className='questionBox'>
                                 <div className='question'>
                                     <b>1.</b> If we provide the given statements of perception, cognition, and action to general people, do you think it would help people understand the value of legalization of abortion?
@@ -180,7 +173,7 @@ export const PostSurveyPage = (props) => {
                                         <div className='question'>
                                             {index+1}. {question}
                                         </div>
-                                        <Likertchoice val={answer[index]} id={index} setAnswer={(val) => setIthAnswer(index, val)} labels={['Very Low', 'Low', 'Little Low', 'Neutral', 'Little High', 'High', 'Very High']}/>
+                                        <Likertchoice val={answer[index+1]} id={index+1} setAnswer={(val) => setIthAnswer(index+1, val)} labels={['Very Low', 'Low', 'Little Low', 'Neutral', 'Little High', 'High', 'Very High']}/>
                                     </div>
                                 ))
                             }           
