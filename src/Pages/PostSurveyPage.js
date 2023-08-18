@@ -122,7 +122,7 @@ export const PostSurveyPage = (props) => {
                 <div className='explaination'>
                         {currentPageNum === 11 ?
                             <>
-                                This is the post-survey about previous <b>Task 2</b>.
+                                This is the post-survey about previous task.
                                 We would like to gather more information about your experience with the task.
                                 Please take a moment to answer the following questions.
                             </>
