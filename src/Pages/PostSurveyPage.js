@@ -136,7 +136,7 @@ export const PostSurveyPage = (props) => {
                         <div className='questionsContainer'>
                             <div className='questionBox'>
                                 <div className='question'>
-                                    <b>1.</b>  (Optional) Feel free to leave any feedbacks regarding our survey.
+                                    <b>1.</b>  (Optional) Feel free to leave any feedback regarding our survey.
                                 </div>
                                 <input className='shortform' name={0} value={answer[0]} onChange={inputHandler}/>
                             </div>
@@ -154,7 +154,7 @@ export const PostSurveyPage = (props) => {
                             </div>
                             <div className='questionBox'>
                                 <div className='question'>
-                                    <b>2.</b>  (Optional) Feel free to leave any feedbacks regarding our survey.
+                                    <b>2.</b>  (Optional) Feel free to leave any feedback regarding our survey.
                                 </div>
                                 <input className='shortform' name={2} value={answer[2]} onChange={inputHandler}/>
                             </div>
